@@ -1,0 +1,110 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/sudarshan/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+background-opacity = 0.5
+unfocused-split-opacity = 0.8
+background-blur = 20
+
+working-directory="/Users/sudarshan/Documents/Code/conway/conway"
+shell-integration = detect
+
+# -----------------------------------------------------------------------------
+# Colors
+# This is the modern format. All colors are defined by name inside this table.
+# -----------------------------------------------------------------------------
+background = "#16161E"
+foreground = "#D08770"
+selection-background = "#434C5E"
+selection-foreground = "#EBCB8B"
+
+# -----------------------------------------------------------------------------
+# Cursor styling options
+# -----------------------------------------------------------------------------
+cursor-color = "#5E81AC"
+cursor-style = "block"
+cursor-style-blink = true
+cursor-opacity = 1.0
+font-size = 15
+confirm-close-surface = true
+
+# Palette colors (for 256 color support)
+palette = 0=#2E3440
+palette = 1=#BF616A
+palette = 2=#A3BE8C
+palette = 3=#EBCB8B
+palette = 4=#5E81AC
+palette = 5=#B48EAD
+palette = 6=#88C0D0
+palette = 7=#E5E9F0
+palette = 8=#4C566A
+palette = 9=#BF616A
+palette = 10=#A3BE8C
+palette = 11=#EBCB8B
+palette = 12=#81A1C1
+palette = 13=#B48EAD
+palette = 14=#8FBCBB
+palette = 15=#ECEFF4
+
+# removes the ability to have tabs
+macos-titlebar-style = tabs
+window-inherit-working-directory = true
+confirm-close-surface = false
+resize-overlay = never
+scrollback-limit = 4294967295
+window-padding-x = 20
+window-padding-y = 10
+
+# -----------------------------------------------------------------------------
+# Keybindings
+# Using the correct keybind format for Ghostty
+# -----------------------------------------------------------------------------
+keybind = "super+t=new_tab"
+keybind = "super+w=close_surface"
+keybind = "super+shift+right_bracket=next_tab"
+keybind = "super+shift+left_bracket=previous_tab"
+keybind = "super+d=new_split:right"
+keybind = "super+shift+d=new_split:down"
+keybind = "shift+enter=text:\n"
+
+# cmd+shift+, is reload config
