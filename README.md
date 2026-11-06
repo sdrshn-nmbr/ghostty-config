@@ -17,3 +17,7 @@ cp config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 - Transparent background with blur
 - Custom keybindings for tabs and splits
 - Configured for macOS with tab-style titlebar
+
+## Fonts
+
+The config uses JetBrains Mono at 14 pt.
