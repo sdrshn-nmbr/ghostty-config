@@ -1,0 +1,20 @@
+name: open-pr
+on:
+  workflow_dispatch:
+    inputs:
+      branch: { required: true, type: string }
+      title: { required: true, type: string }
+      body: { required: false, type: string, default: "" }
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  open:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ inputs.branch }}
+          TITLE: ${{ inputs.title }}
+          BODY: ${{ inputs.body }}
+        run: gh pr create -R "$GITHUB_REPOSITORY" --head "$BRANCH" --base main --title "$TITLE" --body "$BODY"
